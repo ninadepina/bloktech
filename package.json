@@ -1,0 +1,28 @@
+{
+  "name": "bloktech",
+  "version": "1.0.0",
+  "description": "webapplicatie bloktech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninadepina/bloktech.git"
+  },
+  "keywords": [
+    "bloktech",
+    "frontend",
+    "backend"
+  ],
+  "author": "Nina Vens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ninadepina/bloktech/issues"
+  },
+  "homepage": "https://github.com/ninadepina/bloktech#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "lodash": "^4.17.21"
+  }
+}
