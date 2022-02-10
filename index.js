@@ -1,4 +1,13 @@
-const _ = require("lodash");
+const lodash = require("lodash");
+const camelCase = require('camelcase');
+const express = require("express");
+const app = express();
 
-const ver = _.VERSION;
-console.log(ver);
+app.get('/', function (req, res) {
+    res.send('hello world');
+})
+
+app.listen(3000)
+
+
+console.log(camelCase('camel case'));
