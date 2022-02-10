@@ -23,6 +23,7 @@
   "homepage": "https://github.com/ninadepina/bloktech#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.15"
   }
 }
