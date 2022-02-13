@@ -8,9 +8,9 @@ blabla
 
 ## Concept
 A matching app for dogs that are looking for an owner, and people who are looking to adopt a dog.
-**Target audience:** everyone (18+) who is looking to adopt a dog, and shelters who want to put their dog(s) up for adoption
-**Look and feel of the application:** modern, simple, clean
-**Main user interactions:** swipe, chat, (dis)like, refind like, remove like
+- **Target audience:** everyone (18+) who is looking to adopt a dog, and shelters who want to put their dog(s) up for adoption
+- **Look and feel of the application:** modern, simple, clean
+- **Main user interactions:** swipe, chat, (dis)like, refind like, remove like
 
 ## Job Stories
 **When I** am looking to adopt a dog **I want** to be able to contact the current owner/shelter **so I** can ask any questions I may have.
