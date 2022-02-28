@@ -4,7 +4,7 @@ const app = express();
 const { engine } = require('express-handlebars');
 
 const PORT = process.env.PORT || 3000;
-// process.env.PORT
+
 
 app.use('/static', express.static('static'));
 
@@ -23,7 +23,7 @@ app.get('/login', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log('app running on port', PORT);
+    console.log(`server running on PORT ${PORT}`);
 })
 
 app.use((req, res, next) => {
