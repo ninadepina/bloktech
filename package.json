@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/ninadepina/bloktech#readme",
   "dependencies": {
+    "body-parser": "^1.19.2",
     "camelcase": "^6.3.0",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "lodash": "^4.17.21",
+    "multer": "^1.4.4",
     "nodemon": "^2.0.15"
   }
 }
