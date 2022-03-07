@@ -3,6 +3,10 @@ const express = require('express');
 const app = express();
 const { engine } = require('express-handlebars');
 const bodyParser = require('body-parser');
+const sass = require('sass'); 
+
+const bcrypt = require('bcrypt');
+
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -13,6 +17,7 @@ const upload = multer({ dest: './public/data/uploads/' })
 
 const PORT = process.env.PORT || 3000;
 
+// app.use(express.json());
 
 app.use('/static', express.static('static'));
 
@@ -27,6 +32,9 @@ app.get('/', (req, res) => {
 
 app.get('/signup', (req, res) => {
     res.render('register');
+})
+app.get('/signin', (req, res) => {
+    res.render('signin');
 })
 
 app.post('/info', (req, res) => {
