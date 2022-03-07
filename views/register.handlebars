@@ -1,32 +1,56 @@
 <main id="signup">
-    {{!-- {{>header}} --}}
-    <section>
-        <form action="/info" method="POST">
-            <fieldset>
-                <legend>Your information:</legend>
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required>
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" required>
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" required>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" required>
-                <label for="confirm_password">Repeat password</label>
-                <input type="password" name="confirm_password" id="confirm_password" required>
-            </fieldset>
-            <fieldset>
-                <legend>Your pets information:</legend>
-                <label for="namePet">Name</label>
-                <input type="text" name="namePet" id="namePet" required>
-                <label for="birthday">Birthday</label>
-                <input type="date" name="birthday" id="birthday" required>
-                <label for="breed">Breed</label>
-                <input type="text" name="breed" id="breed" required>
-                <label for="image">Image</label>
-                <input type="file" name="image" id="image" accept="image/*" required>
-            </fieldset>
-            <input type="submit" value="Signup">
-        </form>
+   
+   <section class="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <details open>
+                    <summary>Your information:</summary>
+                    <fieldset>
+                        <input type="text" name="name" id="name" placeholder="Name" required>
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
+                        <input type="text" name="username" id="username" placeholder="Username" autocomplete="off" required>
+                        <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" required>
+                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" autocomplete="off" required>
+                    </fieldset>
+                </details>
+                <details>
+                    <summary>Your pets information:</summary>
+                    <fieldset>
+                        <input type="text" name="namePet" id="namePet" placeholder="Name Of Pet" autocomplete="off" required>
+                        <input type="date" name="birthday" id="birthday" required>
+                        <input type="text" name="breed" id="breed" placeholder="Breed Of Pet" autocomplete="off" required>
+                        <input type="file" name="image" id="image" accept="image/*" required>
+                    </fieldset>
+                </details>
+                <input type="submit" value="Sign up">
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign In</h1>
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <a href="#">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <img src="/static/images/logoPawfinder.png" alt="Pawfinder logo">
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <img src="/static/images/logoPawfinder.png" alt="Pawfinder logo">
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
     </section>
+    
 </main>
