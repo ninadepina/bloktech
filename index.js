@@ -30,10 +30,10 @@ app.get('/', (req, res) => {
     res.render('home');
 })
 
-app.get('/signup', (req, res) => {
+app.get('/register', (req, res) => {
     res.render('register');
 })
-app.get('/signin', (req, res) => {
+app.get('/login', (req, res) => {
     res.render('signin');
 })
 
