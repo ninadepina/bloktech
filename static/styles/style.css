@@ -177,34 +177,12 @@ section {
 	top: 0;
 	height: 100%;
 	transition: all 0.6s ease-in-out;
-}
-
-.sign-in-container {
-    left: 0;
+	left: 0;
 	width: 50%;
 	z-index: 2;
 }
 
-.container.right-panel-active .sign-in-container {
-	transform: translateX(100%);
-}
 
-.sign-up-container {
-	left: 0;
-	width: 50%;
-	opacity: 0;
-	z-index: 1;
-}
-.sign-up-container h1 {
-	margin-bottom: 0.4em;
-}
-
-.container.right-panel-active .sign-up-container {
-	transform: translateX(100%);
-	opacity: 1;
-	z-index: 5;
-	animation: show 0.6s;
-}
 
 @keyframes show {
 	0%, 49.99% {
@@ -229,9 +207,7 @@ section {
 	z-index: 100;
 }
 
-.container.right-panel-active .overlay-container{
-	transform: translateX(-100%);
-}
+
 
 .overlay {
 	position: relative;
@@ -248,9 +224,8 @@ section {
   	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
-
-.container.right-panel-active .overlay {
-  	transform: translateX(50%);
+.overlay a {
+	margin: 0;
 }
 
 /* OVERLAY */
@@ -274,27 +249,13 @@ section div:last-of-type div div img {
     margin: 2.8em 0;
 }
 
-
-/* OVERLAY LEFT (REGISTER) */
-section div:last-of-type div div:first-of-type {
-	transform: translateX(-20%);
-}
-
-.container.right-panel-active .overlay-left {
-	transform: translateX(0);
-}
-
-
-
-/* OVERLAY RIGHT (SIGN IN) */
-section div:last-of-type div div:last-of-type {
+/* OVERLAY RIGHT */
+section div:last-of-type div div {
 	right: 0;
 	transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
-	transform: translateX(20%);
-}
+
 
 
 form div {

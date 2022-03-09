@@ -1,7 +1,7 @@
 <main id="signup">
    
    <section class="container">
-        <div class="form-container sign-up-container">
+        <div class="form-container">
             <form action="#">
                 <h1>Create Account</h1>
                 <details open>
@@ -27,30 +27,16 @@
             </form>
         </div>
 
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Sign In</h1>
-                <input type="text" name="username" id="username" placeholder="Username" required>
-                <input type="password" name="password" id="password" placeholder="Password" required>
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
-            </form>
-        </div>
-
         <div class="overlay-container">
             <div class="overlay">
-                <div class="overlay-panel overlay-left">
+                <div>
                     <h1>Welcome Back!</h1>
                     <img src="/static/images/logoPawfinder.png" alt="Pawfinder logo">
-                    <button class="ghost" id="signIn">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <img src="/static/images/logoPawfinder.png" alt="Pawfinder logo">
-                    <button class="ghost" id="signUp">Sign Up</button>
+                    <a href="/signin"><button class="ghost" id="signIn">Sign In</button></a>
                 </div>
             </div>
         </div>
     </section>
+    <script src="/static/scripts/targetDetail.js"></script>
     
 </main>

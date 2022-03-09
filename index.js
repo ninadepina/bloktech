@@ -7,10 +7,8 @@ const sass = require('sass');
 
 const bcrypt = require('bcrypt');
 
-
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 const multer = require('multer');
 const upload = multer({ dest: './public/data/uploads/' })
@@ -21,19 +19,23 @@ const PORT = process.env.PORT || 3000;
 
 app.use('/static', express.static('static'));
 
+//handlebars settings
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', 'views');
 
-
+//landing page
 app.get('/', (req, res) => {
     res.render('home');
 })
 
-app.get('/register', (req, res) => {
+//signup/register page
+app.get('/signup', (req, res) => {
     res.render('register');
 })
-app.get('/login', (req, res) => {
+
+//signin/login page
+app.get('/signin', (req, res) => {
     res.render('signin');
 })
 
