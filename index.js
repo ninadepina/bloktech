@@ -43,7 +43,11 @@ app.post('/signup', async (req, res) => {
     await User.create({
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        confirm_password: req.body.confirm_password,
+        namePet: req.body.namePet,
+        birthday: req.body.birthday,
+        breed: req.body.breed
     })
     res.redirect('/signin')
 });
