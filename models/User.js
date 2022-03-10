@@ -14,6 +14,22 @@ const userSchema = new mongoose.Schema({
     password: {
     type: String,
     required: true
+    },
+    confirm_password: {
+        type: String,
+        required: true
+    },
+    namePet: {
+        type: String,
+        required: true
+    },
+    birthday: {
+        type: Date,
+        required: true
+    },
+    breed: {
+        type: String,
+        required: true
     }
 })
 
