@@ -8,4 +8,4 @@ _A platform designed to help foster pets find their new home._
 
 
 ## 📝 License
-[![MIT License][license-shield]][https://github.com/ninadepina/bloktech/blob/main/LICENSE]
+[![MIT License][license-shield]](https://github.com/ninadepina/bloktech/blob/main/LICENSE)
