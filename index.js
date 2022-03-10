@@ -5,6 +5,7 @@ const { engine } = require('express-handlebars');
 const bodyParser = require('body-parser');
 const sass = require('sass'); 
 const connectDB = require('./config/db')
+const User = require('./models/User')
 // const session = require('express-session');
 // const MongoDBStore = require('connect-mongodb-session')(session);
 require('dotenv').config()
@@ -45,8 +46,13 @@ app.get('/signin', (req, res) => {
     res.render('signin');
 })
 
-app.post('/info', (req, res) => {
-    res.send('The pets name is '+req.body.namePet+' and the owners name is '+req.body.name);
+//signup/register page
+app.post('/register', async (req, res) => {
+    await User.create({
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password
+    })
 });
 
 app.use((req, res, next) => {
