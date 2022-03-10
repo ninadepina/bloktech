@@ -6,8 +6,6 @@ const bodyParser = require('body-parser');
 const sass = require('sass'); 
 const connectDB = require('./config/db')
 const User = require('./models/User')
-// const session = require('express-session');
-// const MongoDBStore = require('connect-mongodb-session')(session);
 require('dotenv').config()
 
 connectDB();
@@ -22,7 +20,6 @@ const upload = multer({ dest: './public/data/uploads/' })
 
 const PORT = process.env.PORT || 3000;
 
-// app.use(express.json());
 
 app.use('/static', express.static('static'));
 
@@ -41,19 +38,20 @@ app.get('/signup', (req, res) => {
     res.render('register');
 })
 
-//signin/login page
-app.get('/signin', (req, res) => {
-    res.render('signin');
-})
-
 //signup/register page
-app.post('/register', async (req, res) => {
+app.post('/signup', async (req, res) => {
     await User.create({
         name: req.body.name,
         email: req.body.email,
         password: req.body.password
     })
+    res.redirect('/signin')
 });
+
+//signin/login page
+app.get('/signin', (req, res) => {
+    res.render('signin');
+})
 
 app.use((req, res, next) => {
     res.status(404).render('not-found');
