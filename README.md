@@ -43,6 +43,9 @@ npm run start
 ```
 Test the feature: [http://localhost:3000/](http://localhost:3000/)
 
+### Connect to a database
+I personally use [MongoDB](https://www.mongodb.com), use [their guide](https://docs.mongodb.com/manual/tutorial/getting-started/) to set up your own connection.
+
 ---
 
 ## 🤖 Dependencies
