@@ -23,7 +23,10 @@ const PORT = process.env.PORT || 3000;
 app.use('/static', express.static('static'));
 
 //handlebars settings
-app.engine('handlebars', engine());
+app.engine('handlebars', engine({
+    layoutsDir: __dirname + "/views/layouts",
+    partialsDir: __dirname + "/views/partials/"
+}));
 app.set('view engine', 'handlebars');
 app.set('views', 'views');
 

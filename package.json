@@ -4,7 +4,7 @@
   "description": "webapplicatie bloktech",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "backend"
   ],
   "author": "Nina Vens",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ninadepina/bloktech/issues"
   },
@@ -25,16 +25,17 @@
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.2",
     "camelcase": "^6.3.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
     "lodash": "^4.17.21",
     "mongoose": "^6.2.5",
     "multer": "^1.4.4",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "serve": "^13.0.2"
   },
   "devDependencies": {
-    "dotenv": "^16.0.0",
     "eslint": "^8.10.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
