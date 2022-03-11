@@ -23,17 +23,20 @@ git config --global user.email "email here"
 ```
 
 ### Clone repo
+Download this project and open it with your code editor. Open your terminal on the path you want to download this repository on and type the following code in your terminal:
 ```
 git clone https://github.com/ninadepina/bloktech.git
 ```
 
 ### Install the dependencies
+Install all the needed dependencies:
 ```
 cd bloktech
 npm install
 ```
 
 ### Run the code
+Go to the repository in the terminal and run the project:
 ```
 cd bloktech
 npm run start
