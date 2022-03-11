@@ -53,8 +53,8 @@ The following packages are being used:
 * [BCrypt](https://github.com/kelektiv/node.bcrypt.js) - for hashing passwords.
 * [Body-parser](https://github.com/expressjs/body-parser) - to fish out data from forms.
 * [Dotenv](https://github.com/motdotla/dotenv) - to securely store credentials.
-* [Express](https://expressjs.com/en/api.html) - used for its fantastic middleware and routing.
-* [Mongoose](https://github.com/Automattic/mongoose) - ODM for MongoDB, to make life easier.
+* [Express](https://expressjs.com/en/api.html) - used for its middleware and routing.
+* [Mongoose](https://github.com/Automattic/mongoose) - object modeling tool for MongoDB.
 * [MongoDB](https://github.com/mongodb/node-mongodb-native) - as database.
 * [NodeJS](https://nodejs.org/en/) - to execute JavaScript code outside a web browser.
 <!-- * [Multer](https://github.com/expressjs/multer) - used for uploading files. -->
