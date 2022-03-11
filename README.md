@@ -2,6 +2,7 @@
 _A platform designed to help foster pets find their new home._
 The concept is like a tinder for (foster) pets and (potential) owners. Shelters can sign up pets. Users (potential owners) can start swiping on the pets. When they see a pet they like, or dislike them. All the liked dogs will be shown in a list, that can later be refound. You can chat with the shelters of your liked pets and you will be provided with more information. I will be making a signup/login feature for this application. 
 
+---
 
 ## 📝 Installation
 A code editor is needed to continue.
@@ -51,6 +52,8 @@ The following packages are being used:
 * [MongoDB](https://github.com/mongodb/node-mongodb-native) - as database.
 <!-- * [Multer](https://github.com/expressjs/multer) - used for uploading files. -->
 * [NodeJS](https://nodejs.org/en/) - for backend I/O.
+
+---
 
 ## 📝 License
 [MIT](https://github.com/ninadepina/bloktech/blob/main/LICENSE) © Nina Vens
