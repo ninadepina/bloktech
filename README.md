@@ -19,11 +19,12 @@ Connect GIT and GitHub in your terminal. This can be down by typing the followin
 ```
 git config --global user.name "username here"
 git config --global user.email "email here"
-
 ```
 
 ### Clone repo
-```git clone https://github.com/ninadepina/bloktech.git```
+```
+git clone https://github.com/ninadepina/bloktech.git
+```
 
 ### Install the dependencies
 ```
@@ -37,7 +38,7 @@ cd bloktech
 npm run start
 ```
 Test the feature: [http://localhost:3000/](http://localhost:3000/)
-
+---
 
 ## 🤖 Dependencies
 The following packages are being used:
