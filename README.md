@@ -56,7 +56,7 @@ The following packages are being used:
 * [Express](https://expressjs.com/en/api.html) - used for its fantastic middleware and routing.
 * [Mongoose](https://github.com/Automattic/mongoose) - ODM for MongoDB, to make life easier.
 * [MongoDB](https://github.com/mongodb/node-mongodb-native) - as database.
-* [NodeJS](https://nodejs.org/en/) - for backend I/O.
+* [NodeJS](https://nodejs.org/en/) - to execute JavaScript code outside a web browser.
 <!-- * [Multer](https://github.com/expressjs/multer) - used for uploading files. -->
 
 ---
