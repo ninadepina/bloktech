@@ -1,16 +1,16 @@
 const express = require('express');
 const app = express();
 const { engine } = require('express-handlebars');
+require('dotenv').config();
+let PORT = process.env.PORT || 3000;
+
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 // const methodOverride = require('method-override');
 const connectDB = require('./config/db')
 const User = require('./models/User')
-require('dotenv').config()
 
 connectDB();
-
-const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
