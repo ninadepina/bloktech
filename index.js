@@ -7,8 +7,8 @@ let PORT = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 // const methodOverride = require('method-override');
-const connectDB = require('./config/db')
-const User = require('./models/User')
+const connectDB = require('./config/db');
+const User = require('./models/User');
 
 connectDB();
 
@@ -34,26 +34,29 @@ app.set('views', 'views');
 //landing page
 app.get('/', (req, res) => {
     res.render('signin');
-})
+});
 app.get('/home', (req, res) => {
     res.render('home');
-})
+});
+app.get('/account', (req, res) => {
+    res.render('account');
+});
 
 
 //signup/register page
 app.get('/signup', (req, res) => {
     res.render('register');
-})
+});
 // signup route
 app.post("/signup", async (req, res) => {
     const body = req.body;
     const email = await User.findOne({email: body.email});
     if (email) {
         //an account with this emailaddress already exists
-        return res.status(400).send("An account with this emailaddress already exists..")
+        return res.status(400).send("An account with this emailaddress already exists..");
     } else {
         if (body.password === body.confirm_password) {
-            console.log('Password === Confirm Password')
+            console.log('Password === Confirm Password');
             // creating a new mongoose doc from user data
             const user = new User(body);
             // generate salt to hash password
@@ -64,8 +67,8 @@ app.post("/signup", async (req, res) => {
             user.save()
             res.redirect('/signin')
         } else {
-            console.log("Password !=== Confirm Password")
-            res.status(400).send("Password is not the same")
+            console.log("Password !=== Confirm Password");
+            res.status(400).send("Password is not the same");
         } 
     }
 });
@@ -82,7 +85,7 @@ app.post("/signin", async (req, res) => {
       // check user password with hashed password stored in the database
       const validPassword = await bcrypt.compare(body.password, user.password);
       if (validPassword) {
-        res.redirect('/account')
+        res.redirect('/account');
       } else {
         res.status(400).send({ error: "Invalid Password" });
       }
@@ -94,10 +97,10 @@ app.post("/signin", async (req, res) => {
 // 404 error
 app.use((req, res, next) => {
     res.status(404).render('not-found');
-})
+});
 
 // PORT
 app.listen(PORT, () => {
     console.log(`server running on PORT ${PORT}`);
-})
+});
 
