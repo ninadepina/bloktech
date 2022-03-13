@@ -3,24 +3,25 @@ const app = express();
 const { engine } = require('express-handlebars');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
+// const methodOverride = require('method-override');
 const connectDB = require('./config/db')
 const User = require('./models/User')
 require('dotenv').config()
 
 connectDB();
 
+const PORT = process.env.PORT || 3000;
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: false}));
+app.use('/static', express.static('static'));
+// app.use(methodOverride('_method'));
 
 
 // const multer = require('multer');
 // const upload = multer({ dest: './public/data/uploads/' })
 
-const PORT = process.env.PORT || 3000;
-
-
-app.use('/static', express.static('static'));
 
 //handlebars settings
 app.engine('handlebars', engine({
@@ -32,8 +33,12 @@ app.set('views', 'views');
 
 //landing page
 app.get('/', (req, res) => {
+    res.render('signin');
+})
+app.get('/home', (req, res) => {
     res.render('home');
 })
+
 
 //signup/register page
 app.get('/signup', (req, res) => {
@@ -56,7 +61,8 @@ app.post("/signup", async (req, res) => {
             // set user password to hashed password
             user.password = await bcrypt.hash(user.password, salt);
             user.confirm_password = await bcrypt.hash(user.password, salt);
-            user.save().then((doc) => res.status(201).send(doc));
+            user.save()
+            res.redirect('/signin')
         } else {
             console.log("Password !=== Confirm Password")
             res.status(400).send("Password is not the same")
@@ -76,7 +82,7 @@ app.post("/signin", async (req, res) => {
       // check user password with hashed password stored in the database
       const validPassword = await bcrypt.compare(body.password, user.password);
       if (validPassword) {
-        res.status(200).send({ message: "Valid password" });
+        res.redirect('/account')
       } else {
         res.status(400).send({ error: "Invalid Password" });
       }
@@ -85,12 +91,12 @@ app.post("/signin", async (req, res) => {
     }
 });
 
-
-
+// 404 error
 app.use((req, res, next) => {
     res.status(404).render('not-found');
 })
 
+// PORT
 app.listen(PORT, () => {
     console.log(`server running on PORT ${PORT}`);
 })

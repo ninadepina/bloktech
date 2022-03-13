@@ -58,6 +58,7 @@ The following packages are being used:
 * [MongoDB](https://github.com/mongodb/node-mongodb-native) - as database.
 * [NodeJS](https://nodejs.org/en/) - to execute JavaScript code outside a web browser.
 <!-- * [Multer](https://github.com/expressjs/multer) - used for uploading files. -->
+<!-- * [Method-override](https://github.com/expressjs/method-override) - lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it. -->
 
 ---
 
