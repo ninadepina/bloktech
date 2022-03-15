@@ -273,3 +273,15 @@ form div a {
 	border-radius: 50%;
 	margin: 0 5px;
 }
+
+
+
+
+
+
+.error {
+	border: 1px solid #fb5757;
+}
+.error::placeholder {
+	color: #fb5757;
+}
