@@ -2,6 +2,8 @@
 _A platform designed to help foster pets find their new home._
 The concept is like a tinder for (foster) pets and (potential) owners. Shelters can sign up pets. Users (potential owners) can start swiping on the pets. When they see a pet they like, or dislike them. All the liked dogs will be shown in a list, that can later be refound. You can chat with the shelters of your liked pets and you will be provided with more information. I will be making a signup/login feature for this application. 
 
+![Pawfinder Banner](https://user-images.githubusercontent.com/89778503/162062311-120cfb51-106c-4513-bad9-5e6ed0473a3f.png)
+
 ---
 
 ## 📝 Installation
