@@ -20,28 +20,28 @@ A code editor is needed to continue.
 ### Configure GIT and Github
 Connect GIT and GitHub in your terminal. This can be down by typing the following code into your terminal:
 ```
-git config --global user.name "username here"
-git config --global user.email "email here"
+$ git config --global user.name "username here"
+$ git config --global user.email "email here"
 ```
 
 ### Clone repo
 Download this project and open it with your code editor. Open your terminal on the path you want to download this repository on and type the following code in your terminal:
 ```
-git clone https://github.com/ninadepina/bloktech.git
+$ git clone https://github.com/ninadepina/bloktech.git
 ```
 
 ### Install the dependencies
 Install all the needed dependencies:
 ```
-cd bloktech
-npm install
+$ cd bloktech
+$ npm install
 ```
 
 ### Run the code
 Go to the repository in the terminal and run the project:
 ```
-cd bloktech
-npm run start
+$ cd bloktech
+$ npm run start
 ```
 Test the feature: [http://localhost:3000/](http://localhost:3000/)
 
@@ -65,4 +65,5 @@ The following packages are being used:
 ---
 
 ## 📝 License
-[MIT](https://github.com/ninadepina/bloktech/blob/main/LICENSE) © Nina Vens
+[MIT](https://github.com/ninadepina/bloktech/blob/main/LICENSE) © Nina Vens <br>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
