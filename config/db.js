@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const connectDB = () => {
     try {
@@ -6,7 +6,7 @@ const connectDB = () => {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
-        console.log('connection success');
+        console.log("connection success");
     } catch (err) {
         throw err;
     }

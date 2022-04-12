@@ -1,5 +1,4 @@
-const req = require('express/lib/request')
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 // init the user object
 const userSchema = new mongoose.Schema({
@@ -7,10 +6,10 @@ const userSchema = new mongoose.Schema({
     email: String,
     password: String,
     confirm_password: String,
-    namePet: String,
+    name_pet: String,
     birthday: Date,
     breed: String
 })
 
-const User = mongoose.model('User', userSchema)
+const User = mongoose.model("User", userSchema)
 module.exports = User

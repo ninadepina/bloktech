@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ninadepina/bloktech.git"
+    "url": "https://github.com/ninadepina/bloktech.git"
   },
   "keywords": [
     "bloktech",
@@ -23,18 +23,17 @@
   "homepage": "https://github.com/ninadepina/bloktech#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "body-parser": "^1.19.2",
-    "camelcase": "^6.3.0",
+    "body-parser": "^1.20.0",
+    "config": "^3.3.7",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
+    "express-flash": "^0.0.2",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
-    "lodash": "^4.17.21",
-    "method-override": "^3.0.0",
-    "mongoose": "^6.2.5",
-    "multer": "^1.4.4",
+    "mongoose": "^6.2.10",
     "nodemon": "^2.0.15",
     "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "serve": "^13.0.2"
   },
