@@ -4,6 +4,7 @@
 }
 *::selection {
     background: #FF6161;
+	color: #fff;
 }
   
 /* :root {
@@ -50,8 +51,8 @@ a {
 	margin: 15px 0;
 }
 
-button {
-	border-radius: 20px;
+.register button, .signin button {
+	/* border-radius: 20px; */
 	border: 1px solid #fb5757;
 	background-color: #fb5757;
 	color: #fff;
@@ -82,7 +83,7 @@ input:focus {
 
 input[type="submit"] {
 	width: 25%;
-	border-radius: 20px;
+	/* border-radius: 20px; */
 	border: 1px solid #fb5757;
 	background-color: #fb5757;
 	color: #fff;
@@ -123,17 +124,6 @@ input[type="date"] {
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(48%) sepia(30%) saturate(0%) hue-rotate(203deg) brightness(90%) contrast(95%);
 	cursor: pointer;
-}
-
-details {
-	padding-top: 0.4em;
-}
-details summary {
-    list-style-type: '👉🏼';
-	cursor: pointer;
-}
-details[open] summary {
-    list-style-type: '👇🏼';
 }
 
 fieldset {
@@ -284,4 +274,62 @@ form div a {
 }
 .error::placeholder {
 	color: #fb5757;
+}
+
+/*
+***
+* INDEX PAGE
+***
+*/
+.index section {
+	padding-left: 1em;
+}
+
+.index h1 {
+	font-size: 3em;
+	color: #ff416c;
+}
+
+.index a:first-of-type {
+	padding: 0 0.3em;
+	color: #fff;
+	background-color: #ff416c;
+}
+.index a:last-of-type {
+	margin-left: 0.6em;
+	color: #000;
+	text-decoration: underline;
+}
+
+
+/*
+***
+* REGISTER PAGE
+***
+*/
+
+.register p {
+	margin: 2em 0 0.5em 0;
+}
+
+
+/*
+***
+* LOGIN PAGE
+***
+*/
+
+
+/*
+***
+* ACCOUNT PAGE
+***
+*/
+.account button {
+	font-size: 14px;
+	font-weight: 300;
+	color: #fff;
+	background-color: #ff416c;
+	border: none;
+	cursor: pointer;
 }
