@@ -1,15 +1,13 @@
 <main class="account">
     <section>
         <button>< back to previous page</button>
-        <form action="/home" method="POST">
-            <h1>Account of</h1>
+        <form action="/account" method="POST">
+            <h1>Account of {{ name }}</h1>
             <fieldset>
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" value="{{ user.name }}">
+                <input type="text" name="name" id="name" value="{{ name }}">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" value="{{ user.email }}">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" value="{{ user.username }}">
+                <input type="email" name="email" id="email" value="{{ email }}">
                 <input type="submit" value="Save">
             </fieldset> 
         </form>
