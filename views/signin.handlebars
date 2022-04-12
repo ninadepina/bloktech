@@ -1,12 +1,17 @@
-<main>
+<main class="signin">
 
-    <section class="container">
+    <section>
 
         <div class="form-container">
             <form action="signin" method="POST">
+
+                {{#if  messages.error}}
+                    <p class="error_message">{{ messages.error }}</p>
+                {{/if}}
+
                 <h1>Sign In</h1>
-                <input type="email" name="email" id="email" placeholder="E-mail" required>
-                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="text" name="username" id="username" placeholder="Enter your username" required />
+                <input type="password" name="password" id="password" placeholder="Enter your password" required />
                 <a href="#">Forgot your password?</a>
                 <button>Sign In</button>
             </form>
@@ -17,7 +22,7 @@
                 <div>
                     <h1>New here?</h1>
                     <img src="/static/images/logoPawfinder.png" alt="Pawfinder logo">
-                    <a href="/signup"><button class="ghost" id="signUp">Sign Up</button></a>
+                    <a href="/register"><button class="ghost" id="signUp">Sign Up</button></a>
                 </div>
             </div>
         </div>
