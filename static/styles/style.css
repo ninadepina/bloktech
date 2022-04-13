@@ -300,6 +300,7 @@ form div a {
 }
 .register .form-container {
 	padding-top: 14em;
+	overflow-y: scroll;
 }
 /*
 ***
