@@ -3,15 +3,33 @@
     outline: none;
 }
 *::selection {
-    background: #ff416c;
+    background: var(--main-color-1);
 	color: #fff;
 }
   
+
+:root {
+	--main-color-1: #ff416c;
+	--main-color-2: #fb5757;
+	--bg: #fff;
+	--font-color: #000;
+	--font-color-overlay: #eee;
+	--href-color: #333;
+	--font-family: 'Montserrat', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+		--bg: #494949;
+		--font-color: #eee;
+		--href-color: #eee;
+	}
+}
   
 html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+	font-family: var(--font-family);
 }
 
 
@@ -21,20 +39,24 @@ body {
 	align-items: center;
 	flex-direction: column;
 	background: #f6f5f7;
-	font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-	font-weight: bold;
 	margin: 0;
+	font-weight: bold;
+	color: var(--font-color);
+}
+.overlay h1 {
+	color: var(--font-color-overlay);
 }
 
 p {
+	margin: 20px 0 30px;
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 20px;
 	letter-spacing: 0.5px;
-	margin: 20px 0 30px;
+	color: var(--font-color);
 }
 
 span {
@@ -42,15 +64,15 @@ span {
 }
 
 a {
-	color: #333;
+	color: var(--href-color);
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
 }
 
 .register button, .signin button {
-	border: 1px solid #fb5757;
-	background-color: #fb5757;
+	border: 1px solid var(--main-color-2);
+	background-color: var(--main-color-2);
 	color: #fff;
 	font-size: 12px;
 	font-weight: regular;
@@ -73,14 +95,14 @@ input {
 	color: #727272;
 }
 input:focus {
-	border: 1px solid #fb5757;
+	border: 1px solid var(--main-color-2);
 	width: calc(100% - 1px);
 }
 
 input[type="submit"] {
 	width: 25%;
-	border: 1px solid #fb5757;
-	background-color: #fb5757;
+	border: 1px solid var(--main-color-2);
+	background-color: var(--main-color-2);
 	color: #fff;
 	font-size: 12px;
 	font-weight: regular;
@@ -112,6 +134,7 @@ label {
 	margin-top: 1em;
 	padding-left: 0.4em;
 	font-size: 0.8em;
+	color: var(--font-color);
 }
 
 
@@ -137,7 +160,6 @@ form {
 	flex-direction: column;
 	height: 100%;
 	padding: 0 50px;
-	background-color: #fff;
 	text-align: center;
 }
 
@@ -146,7 +168,7 @@ section {
     overflow: hidden;
     width: 100vw;
 	height: 100vh;
-	background-color: #fff;
+	background-color: var(--bg);
 }
 
 .form-container {
@@ -191,9 +213,9 @@ section {
 	left: -100%;
 	height: 100%;
 	width: 200%;
-	background: #fb5757;
-	background: -webkit-linear-gradient(to right, #fb5757, #ff416c);
-	background: linear-gradient(to right, #fb5757, #ff416c);
+	background: var(--main-color-2);
+	background: -webkit-linear-gradient(to right, var(--main-color-2), var(--main-color-1));
+	background: linear-gradient(to right, var(--main-color-2), var(--main-color-1));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -209,8 +231,8 @@ section {
 section div:last-of-type div div {
 	position: absolute;
 	top: 0;
-	height: 100%;
 	width: 50%;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -222,8 +244,8 @@ section div:last-of-type div div {
 }
 
 section div:last-of-type div div img {
-	height: 40%;
     margin: 2.8em 0;
+	height: 40%;
 }
 
 /* OVERLAY RIGHT */
@@ -241,14 +263,14 @@ form div {
 }
 
 form div a {
-	height: 40px;
+	margin: 0 5px;
 	width: 40px;
+	height: 40px;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	border: 1px solid #DDDDDD;
 	border-radius: 50%;
-	margin: 0 5px;
 }
 
 
@@ -257,10 +279,10 @@ form div a {
 
 
 .error {
-	border: 1px solid #fb5757;
+	border: 1px solid var(--main-color-2);
 }
 .error::placeholder {
-	color: #fb5757;
+	color: var(--main-color-2);
 }
 
 /*
@@ -274,13 +296,13 @@ form div a {
 
 .index h1 {
 	font-size: 3em;
-	color: #ff416c;
+	color: var(--main-color-1);
 }
 
 .index a:first-of-type {
 	padding: 0 0.3em;
 	color: #fff;
-	background-color: #ff416c;
+	background-color: var(--main-color-1);
 }
 .index a:last-of-type {
 	margin-left: 0.6em;
@@ -321,7 +343,7 @@ form div a {
 	font-size: 14px;
 	font-weight: 300;
 	color: #fff;
-	background-color: #ff416c;
+	background-color: var(--main-color-1);
 	border: none;
 	cursor: pointer;
 }
@@ -334,8 +356,8 @@ form div a {
 	padding: 0 0.3em;
 	font-size: 1em;
 	color: #fff;
-	background-color: #ff416c;
+	background-color: var(--main-color-1);
 }
 .account input[type="submit"] {
-	background-color: #ff416c;
+	background-color: var(--main-color-1);
 }
