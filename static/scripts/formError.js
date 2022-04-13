@@ -1,7 +1,7 @@
 // if emailaddress meets all requirements
 const regex = (email) => {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
+};
 
 // check if all input meet all requirements
 const form_signup = document.querySelector("#form_signup");
@@ -17,13 +17,13 @@ if (form_signup) {
         const form_birthday = document.querySelector("#birthday");
         const form_breed = document.querySelector("#breed");
 
-        if (form_name.value.length != 0 && regex(form_email.value) && form_password.value.length != 0 && form_password.value === form_confirm_password.value) {
-            return
+        if (form_name.value.length !== 0 && regex(form_email.value) && form_password.value.length !== 0 && form_password.value === form_confirm_password.value) {
+
         } else {
-            e.preventDefault()
+            e.preventDefault();
 
             // check given name
-            if (form_name.value.length != 0) {
+            if (form_name.value.length !== 0) {
                 console.log("A name has been given");
                 form_name.classList.remove("error");
             } else {
@@ -44,7 +44,7 @@ if (form_signup) {
             }
 
             // check given username
-            if (form_username.value.length != 0) {
+            if (form_username.value.length !== 0) {
                 console.log("A username has been given");
                 form_username.classList.remove("error");
             } else {
@@ -53,7 +53,7 @@ if (form_signup) {
             }
 
             // check given password
-            if (form_password.value.length != 0) {
+            if (form_password.value.length !== 0) {
                 if (form_password.value === form_confirm_password.value) {
                     console.log("Passwords are the same");
                     form_password.classList.remove("error");
@@ -70,7 +70,7 @@ if (form_signup) {
             }
 
             // check given petname
-            if (form_pet_name.value.length != 0) {
+            if (form_pet_name.value.length !== 0) {
                 console.log("A petname has been given");
                 form_pet_name.classList.remove("error");
             } else {
@@ -79,7 +79,7 @@ if (form_signup) {
             }
 
             // check given birthday
-            if (form_birthday.value.length != 0) {
+            if (form_birthday.value.length !== 0) {
                 console.log("A birthday has been given");
                 form_birthday.classList.remove("error");
             } else {
@@ -88,7 +88,7 @@ if (form_signup) {
             }
 
             // check given breed
-            if (form_breed.value.length != 0) {
+            if (form_breed.value.length !== 0) {
                 console.log("A breed has been given");
                 form_breed.classList.remove("error");
             } else {

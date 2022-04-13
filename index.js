@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const { engine } = require("express-handlebars");
 require("dotenv").config();
-let PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 const session = require("express-session");
 const flash = require("express-flash");
@@ -14,11 +14,9 @@ const connectDB = require("./config/db");
 const User = require("./models/User");
 
 
+
 // ===============DATABASE===============
 connectDB();
-
-
-
 
 
 
@@ -30,7 +28,7 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((id, done) => {
     User.findById(id, (err, user) => {
         done(err, user);
-    })
+    });
 });
 
 
@@ -40,18 +38,18 @@ passport.use("local-signin", new localStrategy((username, password, done) => {
 		if (err) {
             return done(err);
         }
-		if (!user) { 
-            return done(null, false, { message: "This user doesn't exist.." }); 
+		if (!user) {
+            return done(null, false, { message: "This user doesn't exist.." });
         }
 
 		bcrypt.compare(password, user.password, (err, res) => {
 			if (err) {
-                return done(err); 
+                return done(err);
             }
 			if (res === false) {
                 return done(null, false, { message: "Incorrect password.." });
             }
-			
+
 			return done(null, user);
 		});
 	});
@@ -59,23 +57,19 @@ passport.use("local-signin", new localStrategy((username, password, done) => {
 
 
 
-
-
-
-
 const isLoggedIn = (req, res, next) => {
-    if (req.isAuthenticated()) { 
-        return next(); 
+    if (req.isAuthenticated()) {
+        return next();
     }
     res.redirect("/signin");
-}
+};
 
 const isLoggedOut = (req, res, next) => {
-    if (!req.isAuthenticated()) { 
-        return next(); 
+    if (!req.isAuthenticated()) {
+        return next();
     }
     res.redirect("/");
-}
+};
 
 // ===============EXPRESS================
 // Configure Express
@@ -95,13 +89,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-//handlebars settings
+// handlebars settings
 app.engine("handlebars", engine({
-    layoutsDir: __dirname + "/views/layouts"
+    layoutsDir: `${__dirname}/views/layouts`
 }));
 app.set("view engine", "handlebars");
 app.set("views", "views");
-
 
 
 
@@ -110,7 +103,7 @@ app.get("/", isLoggedIn, (req, res) => {
     res.render("index", { title: "Home" });
 });
 
-app.get("/signin", isLoggedOut, (req,res) => {
+app.get("/signin", isLoggedOut, (req, res) => {
     res.render("signin");
 });
 app.post("/signin", passport.authenticate("local-signin", {
@@ -119,7 +112,7 @@ app.post("/signin", passport.authenticate("local-signin", {
     failureFlash: true
 }));
 
-app.get('/register', isLoggedOut, (req, res) => {
+app.get("/register", isLoggedOut, (req, res) => {
     res.render("register");
 });
 app.post("/register", async (req, res) => {
@@ -143,7 +136,7 @@ app.post("/register", async (req, res) => {
 });
 
 app.get("/account", isLoggedIn, (req, res) => {
-    res.render('account', {
+    res.render("account", {
         name: req.user.name,
         email: req.user.email
     });
@@ -156,8 +149,6 @@ app.get("/logout", isLoggedIn, (req, res) => {
 
 
 
-
-
 // ===============ERROR================
 app.use((req, res, next) => {
     res.status(404).render("not-found");
@@ -167,4 +158,3 @@ app.use((req, res, next) => {
 app.listen(PORT, () => {
     console.log(`server running on PORT ${PORT}`);
 });
-
