@@ -51,16 +51,19 @@ I personally use [MongoDB](https://www.mongodb.com), use [their guide](https://d
 ---
 
 ## 🤖 Dependencies
-The following packages are being used:
+The following dependencies are being used:
 * [BCrypt](https://github.com/kelektiv/node.bcrypt.js) - for hashing passwords.
 * [Body-parser](https://github.com/expressjs/body-parser) - to fish out data from forms.
 * [Dotenv](https://github.com/motdotla/dotenv) - to securely store credentials.
 * [Express](https://expressjs.com/en/api.html) - used for its middleware and routing.
+* [Express-flash](https://github.com/RGBboy/express-flash) - define a flash message and render it without redirecting the request.
+* [Express-handlebars](https://github.com/express-handlebars/express-handlebars) - a templating engine.
+* [Express-session](https://github.com/expressjs/session) - provides sessions to store user session data for persistency.
 * [Mongoose](https://github.com/Automattic/mongoose) - object modeling tool for MongoDB.
 * [MongoDB](https://github.com/mongodb/node-mongodb-native) - as database.
 * [NodeJS](https://nodejs.org/en/) - to execute JavaScript code outside a web browser.
-<!-- * [Multer](https://github.com/expressjs/multer) - used for uploading files. -->
-<!-- * [Method-override](https://github.com/expressjs/method-override) - lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it. -->
+* [Nodemon](https://github.com/remy/nodemon) - automatically restarts the localhost when it detects file changes.
+* [Passport](https://github.com/jaredhanson/passport) + [Passport-local](https://github.com/jaredhanson/passport-local) - authentication middleware for Node.js.
 
 ---
 
