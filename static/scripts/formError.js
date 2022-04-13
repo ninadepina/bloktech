@@ -1,10 +1,10 @@
 // if emailaddress meets all requirements
-function isEmail(email) {
+const regex = (email) => {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
 // check if all input meet all requirements
-const form_signup = document.querySelector("#form-signup");
+const form_signup = document.querySelector("#form_signup");
 
 if (form_signup) {
     form_signup.addEventListener("click", (e) => {
@@ -17,7 +17,7 @@ if (form_signup) {
         const form_birthday = document.querySelector("#birthday");
         const form_breed = document.querySelector("#breed");
 
-        if (form_name.value.length != 0 && isEmail(form_email.value) && form_password.value.length != 0 && form_password.value === form_confirm_password.value) {
+        if (form_name.value.length != 0 && regex(form_email.value) && form_password.value.length != 0 && form_password.value === form_confirm_password.value) {
             return
         } else {
             e.preventDefault()
@@ -35,7 +35,7 @@ if (form_signup) {
             if (form_email.value.length = 0) {
                 console.log("No email has been given");
                 form_email.classList.add("error");
-            } else if (!isEmail(form_email.value)) {
+            } else if (!regex(form_email.value)) {
                 console.log("Given email is not valid");
                 form_email.classList.add("error");
             } else {
