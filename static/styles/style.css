@@ -3,13 +3,10 @@
     outline: none;
 }
 *::selection {
-    background: #FF6161;
+    background: #ff416c;
 	color: #fff;
 }
   
-/* :root {
-    
-} */
   
 html, body {
     margin: 0;
@@ -52,7 +49,6 @@ a {
 }
 
 .register button, .signin button {
-	/* border-radius: 20px; */
 	border: 1px solid #fb5757;
 	background-color: #fb5757;
 	color: #fff;
@@ -83,7 +79,6 @@ input:focus {
 
 input[type="submit"] {
 	width: 25%;
-	/* border-radius: 20px; */
 	border: 1px solid #fb5757;
 	background-color: #fb5757;
 	color: #fff;
@@ -103,22 +98,8 @@ input[type="submit"]:focus {
 	outline: none;
 }
 
-input[type="file"]::file-selector-button {
-	border: none;
-	padding: .2em .4em;
-	background-color: #fb5757;
-	border-radius: .2em;
-	transition: 1s;
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
-	margin-right: 1em;
-	cursor: pointer;
-}
-input[type="file"]::file-selector-button:hover {
-	background-color: #ff416c;
-}
-
 input[type="date"] {
+	color: #000;
 	cursor: text;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -126,9 +107,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	cursor: pointer;
 }
 
-fieldset {
-	border: none;
+label {
+	align-self: flex-start;
+	margin-top: 1em;
+	padding-left: 0.4em;
+	font-size: 0.8em;
 }
+
+
+
 
 button:active {
 	transform: scale(0.95);
@@ -311,13 +298,16 @@ form div a {
 .register p {
 	margin: 2em 0 0.5em 0;
 }
-
-
+.register .form-container {
+	padding-top: 14em;
+}
 /*
 ***
 * LOGIN PAGE
 ***
 */
+
+
 
 
 /*
@@ -326,10 +316,25 @@ form div a {
 ***
 */
 .account button {
+	margin: 0.6em 0 0 0.6em;
 	font-size: 14px;
 	font-weight: 300;
 	color: #fff;
 	background-color: #ff416c;
 	border: none;
 	cursor: pointer;
+}
+
+.account form {
+	width: 40%;
+	margin: auto;
+}
+.account span {
+	padding: 0 0.3em;
+	font-size: 1em;
+	color: #fff;
+	background-color: #ff416c;
+}
+.account input[type="submit"] {
+	background-color: #ff416c;
 }
